@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aditya Pandey | Data Analyst & Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Aditya Pandey — Data Analyst, Full-Stack Developer & AI Practitioner specializing in ODK/ETL, public health data systems, and MERN stack applications." />
+  <meta name="keywords" content="Aditya Pandey, Data Analyst, Full Stack Developer, ODK, ETL, Public Health Data, Python, SQL, MERN, Bihar" />
+  <meta name="author" content="Aditya Pandey" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Aditya Pandey | Data Analyst & Full-Stack Developer" />
+  <meta property="og:description" content="Field Data → Clean Insights → Real Decisions. Public health data professional and full-stack developer." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/profile.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet" />
+
+  <!-- Icons: Lucide (SVG) via CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230a0f1e'/><text y='24' x='4' font-size='22'>⚡</text></svg>" />
+</head>
+<body>
+
+  <!-- ======================================================
+       LOADING SCREEN
+  ====================================================== -->
+  <div id="loader">
+    <div class="loader-name">Aditya Pandey</div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar-fill"></div>
+    </div>
+    <div class="loader-text">Loading portfolio...</div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="nav-overlay"></div>
+
+  <!-- ======================================================
+       NAVBAR
+  ====================================================== -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="#hero" class="nav-logo" aria-label="Home">AP.</a>
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#ai-section">AI</a></li>
+        <li><a href="#contact" class="nav-cta" id="nav-contact-btn">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" id="hamburger-btn">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ======================================================
+       HERO SECTION
+  ====================================================== -->
+  <section id="hero" aria-label="Hero">
+    <canvas id="canvas-bg" aria-hidden="true"></canvas>
+    <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+    <div class="scan-line" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="hero-content">
+
+        <p class="hero-greeting">// Hello, World! I'm</p>
+
+        <h1 class="hero-name">Aditya Pandey</h1>
+
+        <div class="hero-roles" aria-label="Professional roles">
+          <span class="hero-role-badge">Data Analyst</span>
+          <span class="hero-role-sep">·</span>
+          <span class="hero-role-badge">Full-Stack Dev</span>
+          <span class="hero-role-sep">·</span>
+          <span class="hero-role-badge">AI Practitioner</span>
+        </div>
+
+        <div class="hero-typewriter" aria-live="polite">
+          <span id="typed-roles"></span>
+        </div>
+
+        <div class="hero-mission" aria-label="Mission statement">
+          <span class="mission-part">Field Data</span>
+          <span class="mission-arrow">→</span>
+          <span class="mission-part">Clean Insights</span>
+          <span class="mission-arrow">→</span>
+          <span class="mission-part">Real Decisions</span>
+        </div>
+
+        <div class="hero-ctas">
+          <a href="#projects" class="btn-primary" id="hero-view-work-btn">View My Work</a>
+          <a href="assets/resume_aditya_pandey.pdf" class="btn-secondary" download id="hero-resume-btn">Download Resume</a>
+        </div>
+
+        <div class="hero-socials" aria-label="Social links">
+          <a href="https://github.com/adityapandey2002/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub" id="hero-github-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/aditya-pandey-083a55233" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn" id="hero-linkedin-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="mailto:adityapandey.adu@gmail.com" class="social-link" aria-label="Email" id="hero-email-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+          <a href="tel:+918601862114" class="social-link" aria-label="Phone" id="hero-phone-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 5.8 5.8l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span class="scroll-text">Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       IMPACT STRIP
+  ====================================================== -->
+  <section id="impact" aria-label="Impact numbers">
+    <div class="impact-grid">
+      <div class="impact-card">
+        <span class="impact-icon" aria-hidden="true">👩‍⚕️</span>
+        <div class="impact-number"><span data-count="700" data-suffix="+">0</span></div>
+        <div class="impact-label">ASHA Workers<br>Trained on M-ASHA</div>
+      </div>
+      <div class="impact-card">
+        <span class="impact-icon" aria-hidden="true">⏱️</span>
+        <div class="impact-number"><span data-count="185" data-suffix=" hrs">0</span></div>
+        <div class="impact-label">Clinical Training<br>Delivered</div>
+      </div>
+      <div class="impact-card">
+        <span class="impact-icon" aria-hidden="true">🏥</span>
+        <div class="impact-number"><span data-count="16">0</span></div>
+        <div class="impact-label">Healthcare Professionals<br>Upskilled</div>
+      </div>
+      <div class="impact-card">
+        <span class="impact-icon" aria-hidden="true">🚀</span>
+        <div class="impact-number"><span data-count="3" data-suffix="+">0</span></div>
+        <div class="impact-label">Production Apps<br>Deployed</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       ABOUT SECTION
+  ====================================================== -->
+  <section id="about" class="section" aria-label="About me">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Photo -->
+        <div class="about-photo-wrap reveal-left">
+          <div class="about-photo-ring">
+            <img
+              src="assets/images/profile.jpg"
+              alt="Aditya Pandey — Data Analyst & Full-Stack Developer"
+              class="about-photo"
+              id="profile-photo"
+              loading="lazy"
+            />
+            <div class="about-photo-glow" aria-hidden="true"></div>
+          </div>
+          <div class="about-floating-badge">
+            <span class="badge-label">// Currently</span>
+            <span class="badge-value">Gandhi Fellow · Piramal</span>
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div class="about-text">
+          <p class="section-label reveal" aria-hidden="true">01 // About Me</p>
+          <h2 class="section-title reveal delay-1">Where Field Reality Meets<br>Data Intelligence</h2>
+
+          <p class="reveal delay-2">
+            I'm a <span>public health data professional</span> and <strong>full-stack developer</strong> currently working as a Gandhi Fellow with Piramal Foundation in <span>Muzaffarpur, Bihar</span>. My day starts in the field — coordinating with ASHA workers, ANMs, PHC/CHC staff, and district officials — and ends with <strong>Python scripts, SQL queries, and data pipelines</strong> that turn raw field data into decisions.
+          </p>
+          <p class="reveal delay-3">
+            I work across the entire data lifecycle: from <strong>ODK Collect &amp; ODK Central</strong> forms in the field, through <span>cleaning and validation in Python</span>, to MIS reports that land on the desks of district officials. Outside of health data, I've built and deployed <strong>production MERN stack apps</strong> with JWT auth, REST APIs, Nginx, and PM2 — and I use AI tools daily to sharpen both workflows.
+          </p>
+          <p class="reveal delay-4">
+            My edge is simple: I've <strong>actually been in the field</strong>, so I know what the data means before it ever hits a spreadsheet. That perspective drives every pipeline, dashboard, and codebase I build.
+          </p>
+
+          <div class="exp-tags reveal delay-5" style="margin-top: 8px;">
+            <span class="tag">📍 Muzaffarpur, Bihar</span>
+            <span class="tag">MCA — Pondicherry University</span>
+            <span class="tag">IBM Data Science Certified</span>
+            <span class="tag">Open to Opportunities</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       EXPERIENCE SECTION
+  ====================================================== -->
+  <section id="experience" class="section" aria-label="Work experience">
+    <div class="container">
+      <p class="section-label reveal">02 // Experience</p>
+      <h2 class="section-title reveal delay-1">Where I've Made Impact</h2>
+      <p class="section-subtitle reveal delay-2">Not just job descriptions — real outcomes, real data, real systems.</p>
+
+      <div class="exp-grid">
+
+        <!-- Gandhi Fellowship — PRIMARY -->
+        <div class="exp-card primary tilt-card reveal">
+          <div class="exp-header">
+            <div>
+              <div class="exp-title">Fellow — Health System Strengthening</div>
+              <div class="exp-org">Gandhi Fellowship · Piramal Foundation | Muzaffarpur, Bihar</div>
+            </div>
+            <span class="exp-badge current" aria-label="Current position">🟢 Jul 2025 – Present</span>
+          </div>
+          <ul class="exp-bullets" role="list">
+            <li class="exp-bullet"><span class="bullet-icon" aria-hidden="true">📱</span><span>Used <strong>ODK Collect & ODK Central</strong> for field-level health data collection — structured forms with skip logic, constraints, and choice lists — across VHSND, Godbharai, and PMSMA workflows.</span></li>
+            <li class="exp-bullet"><span class="bullet-icon" aria-hidden="true">🐍</span><span>Built a <strong>Python-based data-cleaning & validation pipeline</strong> for VHSND field data — from raw field extracts to analysis-ready datasets — surfacing data-quality gaps for program review.</span></li>
+            <li class="exp-bullet"><span class="bullet-icon" aria-hidden="true">📊</span><span>Prepared <strong>MIS reports and data summaries</strong> supporting block- and district-level decision-making on health system performance.</span></li>
+            <li class="exp-bullet"><span class="bullet-icon" aria-hidden="true">👩‍⚕️</span><span>Trained <strong>700+ ASHA workers</strong> hands-on on the M-ASHA government digital application, including first-line troubleshooting and field-user support.</span></li>
+            <li class="exp-bullet"><span class="bullet-icon" aria-hidden="true">🏥</span><span>Co-organized a structured <strong>5-week, 185-hour Clinical Skills Refresher &amp; Mentoring Program</strong> (District Hospital Labour Room &amp; SNCU) — 12 Staff Nurses + 4 Doctors — managing training logistics and stakeholder coordination.</span></li>
+            <li class="exp-bullet"><span class="bullet-icon" aria-hidden="true">💊</span><span>Supported <strong>scientific forecasting for medicine &amp; equipment indenting</strong>, applying data-driven logic to reduce stock-outs at PHC level.</span></li>
+          </ul>
+          <div class="exp-tags">
+            <span class="tag">ODK Collect</span><span class="tag">ODK Central</span>
+            <span class="tag">Python</span><span class="tag">Pandas</span>
+            <span class="tag">MIS Reporting</span><span class="tag">VHSND</span>
+            <span class="tag">VL/PKDL Follow-up</span>
+          </div>
+        </div>
+
+        <!-- BiharKaSwaad -->
+        <div class="exp-card tilt-card reveal delay-1">
+          <div class="exp-header">
+            <div>
+              <div class="exp-title">Full-Stack Developer &amp; Web In-Charge (Part-time, Remote)</div>
+              <div class="exp-org">
+                <a href="https://biharkaswaad.in/" target="_blank" rel="noopener noreferrer" style="color:var(--accent-cyan);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+                  BiharKaSwaad
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                &nbsp;— Authentic Bihari Food E-Commerce
+              </div>
+            </div>
+            <span class="exp-badge past">Jul – Oct 2025 · Ongoing</span>
+          </div>
+          <ul class="exp-bullets" role="list">
+            <li class="exp-bullet"><span class="bullet-icon" aria-hidden="true">🛒</span><span>Designed and built the <strong>complete e-commerce platform end-to-end</strong> — from UI/UX design to backend APIs — for selling indigenous Bihari snacks and food products online.</span></li>
+            <li class="exp-bullet"><span class="bullet-icon" aria-hidden="true">⚡</span><span>Implemented <strong>JWT authentication, CRUD operations, product catalogue, cart &amp; order management</strong>, and protected admin routes using the MERN stack.</span></li>
+            <li class="exp-bullet"><span class="bullet-icon" aria-hidden="true">🚀</span><span>Deployed to <strong>production on a VPS</strong> with Nginx reverse proxy, PM2 process management, and SSL — site live at <a href="https://biharkaswaad.in/" target="_blank" rel="noopener noreferrer" style="color:var(--accent-cyan);">biharkaswaad.in</a>.</span></li>
+            <li class="exp-bullet"><span class="bullet-icon" aria-hidden="true">🔧</span><span>Sole developer and <strong>ongoing web in-charge</strong> — handling all frontend, backend, infra, and feature updates part-time remotely.</span></li>
+          </ul>
+          <div class="exp-tags">
+            <span class="tag">MongoDB</span><span class="tag">Express.js</span>
+            <span class="tag">React.js</span><span class="tag">Node.js</span>
+            <span class="tag">JWT</span><span class="tag">Nginx</span><span class="tag">PM2</span>
+            <span class="tag">SSL/HTTPS</span><span class="tag">VPS Deployment</span>
+          </div>
+        </div>
+
+        <!-- Prodigy InfoTech -->
+        <div class="exp-card tilt-card reveal delay-2">
+          <div class="exp-header">
+            <div>
+              <div class="exp-title">Full-Stack Web Developer Intern (Remote)</div>
+              <div class="exp-org">Prodigy InfoTech</div>
+            </div>
+            <span class="exp-badge past">Jun – Jul 2025</span>
+          </div>
+          <ul class="exp-bullets" role="list">
+            <li class="exp-bullet"><span class="bullet-icon" aria-hidden="true">🔗</span><span>Built and tested <strong>REST APIs with JWT/OAuth authentication</strong> for a full-stack e-commerce platform (MERN stack).</span></li>
+          </ul>
+          <div class="exp-tags">
+            <span class="tag">REST APIs</span><span class="tag">JWT</span>
+            <span class="tag">OAuth</span><span class="tag">MERN</span><span class="tag">Postman</span>
+          </div>
+        </div>
+
+        <!-- MinVayu -->
+        <div class="exp-card tilt-card reveal delay-3">
+          <div class="exp-header">
+            <div>
+              <div class="exp-title">Open Source Developer</div>
+              <div class="exp-org">MinVayu</div>
+            </div>
+            <span class="exp-badge past">Aug – Dec 2024</span>
+          </div>
+          <ul class="exp-bullets" role="list">
+            <li class="exp-bullet"><span class="bullet-icon" aria-hidden="true">🌬️</span><span>Applied 3D modeling and automation to <strong>renewable-energy hardware prototyping</strong>.</span></li>
+          </ul>
+          <div class="exp-tags">
+            <span class="tag">3D Modeling</span><span class="tag">Automation</span>
+            <span class="tag">Open Source</span><span class="tag">Renewable Energy</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SKILLS SECTION
+  ====================================================== -->
+  <section id="skills" class="section" aria-label="Skills and technologies">
+    <div class="container">
+      <p class="section-label reveal">03 // Skills</p>
+      <h2 class="section-title reveal delay-1">Tools I Work With</h2>
+      <p class="section-subtitle reveal delay-2">From field data collection to production deployments — the full stack.</p>
+
+      <div class="skills-layout">
+
+        <!-- Radar Chart -->
+        <div class="skills-radar-wrap reveal-left">
+          <div class="radar-chart-container">
+            <canvas id="radarChart" width="320" height="320" aria-label="Skills radar chart"></canvas>
+          </div>
+          <div class="radar-legend">
+            <div class="radar-legend-item"><span class="radar-legend-dot"></span>Data Analysis</div>
+            <div class="radar-legend-item"><span class="radar-legend-dot" style="background:#7c3aed"></span>Field Ops / ODK</div>
+            <div class="radar-legend-item"><span class="radar-legend-dot" style="background:#10b981"></span>Python & SQL</div>
+            <div class="radar-legend-item"><span class="radar-legend-dot" style="background:#f472b6"></span>Full-Stack Dev</div>
+            <div class="radar-legend-item"><span class="radar-legend-dot" style="background:#fbbf24"></span>AI / ML Tools</div>
+          </div>
+        </div>
+
+        <!-- Skill Bars -->
+        <div>
+          <div class="skills-bars reveal-right">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-name">ODK Collect & Central / Field Data</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-width="90%" style="width:0"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-name">Data Cleaning & Validation (Python/Pandas)</span>
+                <span class="skill-pct">87%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-width="87%" style="width:0"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-name">SQL / SQLite Querying</span>
+                <span class="skill-pct">82%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-width="82%" style="width:0"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-name">Dash / Plotly / Excel Dashboards</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-width="80%" style="width:0"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-name">Full-Stack (MERN) Development</span>
+                <span class="skill-pct">78%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-width="78%" style="width:0"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-name">REST APIs / JWT / OAuth</span>
+                <span class="skill-pct">76%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-width="76%" style="width:0"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-name">AI Tools (Gemini, Copilot, ChatGPT)</span>
+                <span class="skill-pct">72%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-width="72%" style="width:0"></div></div>
+            </div>
+          </div>
+
+          <!-- Tech Grid -->
+          <div class="tech-grid-section reveal delay-2">
+            <div class="tech-categories">
+              <div>
+                <p class="tech-category-title">Data & Analysis</p>
+                <div class="tech-pills">
+                  <span class="tech-pill">Python</span><span class="tech-pill">Pandas</span>
+                  <span class="tech-pill">SQL/SQLite</span><span class="tech-pill">Dash</span>
+                  <span class="tech-pill">Plotly</span><span class="tech-pill">Excel (Advanced)</span>
+                </div>
+              </div>
+              <div>
+                <p class="tech-category-title">Field Data & Public Health</p>
+                <div class="tech-pills">
+                  <span class="tech-pill">ODK Collect</span><span class="tech-pill">ODK Central</span>
+                  <span class="tech-pill">Apache Superset</span><span class="tech-pill">DHIS2</span>
+                </div>
+              </div>
+              <div>
+                <p class="tech-category-title">Full-Stack & DevOps</p>
+                <div class="tech-pills">
+                  <span class="tech-pill">React.js</span><span class="tech-pill">Node.js</span>
+                  <span class="tech-pill">Express.js</span><span class="tech-pill">MongoDB</span>
+                  <span class="tech-pill">Nginx</span><span class="tech-pill">PM2</span>
+                  <span class="tech-pill">Git/GitHub</span><span class="tech-pill">Postman</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       PROJECTS SECTION
+  ====================================================== -->
+  <section id="projects" class="section" aria-label="Projects">
+    <div class="container">
+      <p class="section-label reveal">04 // Projects</p>
+      <h2 class="section-title reveal delay-1">Work That Speaks</h2>
+      <p class="section-subtitle reveal delay-2">Selected projects across data science, public health analytics, and full-stack development.</p>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: SpaceX -->
+        <article class="project-card tilt-card reveal">
+          <div class="project-card-image">
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#060b18 0%,#0d1630 100%);display:flex;align-items:center;justify-content:center;font-size:4rem;">🚀</div>
+            <div class="project-card-image-overlay" aria-hidden="true"></div>
+            <span class="project-type-badge ml">ML · Data Science</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-title">SpaceX Launch Success Prediction</h3>
+            <p class="project-desc">
+              IBM Data Science Capstone. Collected 100+ Falcon 9 launch records via REST API &amp; web scraping, built classification models to predict first-stage landing success, and created an interactive Dash/Plotly dashboard with real-time exploration of launch data.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span><span class="tag">SQL/SQLite</span>
+              <span class="tag">Dash/Plotly</span><span class="tag">ML Classification</span>
+              <span class="tag">REST API</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/adityapandey2002/" target="_blank" rel="noopener noreferrer" class="project-link-btn github" id="proj1-github-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: VHSND -->
+        <article class="project-card tilt-card reveal delay-1">
+          <div class="project-card-image">
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#060b18 0%,#0a1a14 100%);display:flex;align-items:center;justify-content:center;font-size:4rem;">🏥</div>
+            <div class="project-card-image-overlay" aria-hidden="true"></div>
+            <span class="project-type-badge data">Public Health · Data</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-title">VHSND Field Data Quality & Insights</h3>
+            <p class="project-desc">
+              Built a lightweight data-cleaning and validation workflow in Python for community health session (VHSND) data — from raw ODK field extracts to an analysis-ready dataset — surfacing data-quality gaps and summarizing findings for program review.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span><span class="tag">Pandas</span>
+              <span class="tag">ODK Central</span><span class="tag">Data Validation</span>
+              <span class="tag">MIS Reporting</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/adityapandey2002/" target="_blank" rel="noopener noreferrer" class="project-link-btn github" id="proj2-github-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: BiharKaSwaad -->
+        <article class="project-card tilt-card reveal delay-2">
+          <div class="project-card-image">
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#0a1505 0%,#0d1a08 60%,#060b18 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
+              <span style="font-size:3.2rem;">🍱</span>
+              <span style="font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:800;color:#e8f4ff;letter-spacing:0.02em;">BiharKaSwaad</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:rgba(0,212,255,0.7);letter-spacing:0.15em;">LIVE IN PRODUCTION</span>
+            </div>
+            <div class="project-card-image-overlay" aria-hidden="true"></div>
+            <span class="project-type-badge fullstack">Full-Stack · Live</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-title">BiharKaSwaad — Authentic Bihari Food E-Commerce Platform</h3>
+            <p class="project-desc">
+              Built and deployed a full-stack e-commerce platform from scratch for selling indigenous Bihari snacks &amp; food products online. Sole developer — frontend to backend, infra to SSL. Live in production with real users.
+            </p>
+            <div class="project-tags">
+              <span class="tag">React.js</span><span class="tag">Node.js</span>
+              <span class="tag">Express.js</span><span class="tag">MongoDB</span>
+              <span class="tag">JWT Auth</span><span class="tag">Nginx</span>
+              <span class="tag">PM2</span><span class="tag">VPS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/adityapandey2002/" target="_blank" rel="noopener noreferrer" class="project-link-btn github" id="proj3-github-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+              </a>
+              <a href="https://biharkaswaad.in/" target="_blank" rel="noopener noreferrer" class="project-link-btn demo" id="proj3-demo-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Site ↗
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       EDUCATION & CERTIFICATIONS
+  ====================================================== -->
+  <section id="education" class="section" aria-label="Education and certifications">
+    <div class="container">
+      <p class="section-label reveal">05 // Education & Certs</p>
+      <h2 class="section-title reveal delay-1">Learning Never Stops</h2>
+
+      <div class="edu-cert-grid">
+
+        <!-- Education Timeline -->
+        <div class="edu-timeline reveal-left">
+          <div class="edu-item">
+            <div class="edu-degree">Master of Computer Applications (MCA)</div>
+            <div class="edu-school">Pondicherry University</div>
+            <div class="edu-year">Aug 2023 – May 2025 · Computer Science</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-degree">Bachelor of Science, Mathematics</div>
+            <div class="edu-school">Kamla Nehru Institute of Physical and Social Sciences, Sultanpur</div>
+            <div class="edu-year">2019 – 2022</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-degree">Entrepreneurship-cum-Skill Development Programme</div>
+            <div class="edu-school">MSME, Pondicherry</div>
+            <div class="edu-year">Python-based tools for data analysis & visualization</div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="cert-list reveal-right">
+          <div class="cert-card">
+            <div class="cert-icon" aria-hidden="true">🏆</div>
+            <div>
+              <div class="cert-name">IBM Data Science Professional Certificate</div>
+              <div class="cert-issuer">Coursera — Python for Data Science · SQL · Data Science Capstone · AI &amp; Development</div>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon" aria-hidden="true">📊</div>
+            <div>
+              <div class="cert-name">Data Analytics with Python & Business Analytics</div>
+              <div class="cert-issuer">NPTEL</div>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon" aria-hidden="true">🔬</div>
+            <div>
+              <div class="cert-name">Data Mining Modelling Using R</div>
+              <div class="cert-issuer">NPTEL</div>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon" aria-hidden="true">🌿</div>
+            <div>
+              <div class="cert-name">Nation Builder Curriculum (NB4)</div>
+              <div class="cert-issuer">Gandhi Fellowship · Piramal Foundation</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       AI SECTION
+  ====================================================== -->
+  <section id="ai-section" class="section" aria-label="AI tools and practices">
+    <div class="container">
+      <p class="section-label reveal">06 // AI Practices</p>
+
+      <div class="ai-inner">
+
+        <div class="ai-text reveal-left">
+          <h2>I Build <span>With AI</span></h2>
+          <p>
+            AI isn't a buzzword in my workflow — it's a daily tool. I use large language models to accelerate data pipeline development, generate and debug code, draft MIS report templates, and explore datasets faster. From Gemini to GitHub Copilot, I integrate AI where it genuinely saves time and improves output quality.
+          </p>
+          <div class="ai-tools">
+            <span class="ai-tool-chip">🤖 Gemini</span>
+            <span class="ai-tool-chip">🧑‍💻 GitHub Copilot</span>
+            <span class="ai-tool-chip">💬 ChatGPT</span>
+            <span class="ai-tool-chip">⚡ Cursor AI</span>
+            <span class="ai-tool-chip">🔗 AI-assisted ETL</span>
+            <span class="ai-tool-chip">📊 AI Data Summaries</span>
+          </div>
+        </div>
+
+        <!-- Terminal visual -->
+        <div class="ai-visual reveal-right">
+          <div class="ai-terminal-bar" aria-hidden="true">
+            <span class="terminal-dot"></span>
+            <span class="terminal-dot"></span>
+            <span class="terminal-dot"></span>
+          </div>
+          <div class="ai-code-line"><span class="comment"># AI-assisted data cleaning pipeline</span></div>
+          <div class="ai-code-line"><span class="keyword">import</span> <span class="var">pandas</span> <span class="keyword">as</span> <span class="var">pd</span></div>
+          <div class="ai-code-line"><span class="keyword">from</span> <span class="var">gemini_api</span> <span class="keyword">import</span> <span class="fn">summarize_gaps</span></div>
+          <div class="ai-code-line">&nbsp;</div>
+          <div class="ai-code-line"><span class="var">df</span> = <span class="var">pd</span>.<span class="fn">read_csv</span>(<span class="string">'vhsnd_raw.csv'</span>)</div>
+          <div class="ai-code-line"><span class="var">clean</span> = <span class="fn">validate_field_data</span>(<span class="var">df</span>)</div>
+          <div class="ai-code-line"><span class="var">summary</span> = <span class="fn">summarize_gaps</span>(<span class="var">clean</span>)</div>
+          <div class="ai-code-line">&nbsp;</div>
+          <div class="ai-code-line"><span class="comment"># → 1,247 records processed</span></div>
+          <div class="ai-code-line"><span class="comment"># → 23 data-quality flags surfaced</span></div>
+          <div class="ai-code-line"><span class="comment"># → Report ready for district review ✓</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       CONTACT SECTION
+  ====================================================== -->
+  <section id="contact" class="section" aria-label="Contact">
+    <div class="container">
+      <p class="section-label reveal">07 // Let's Connect</p>
+      <h2 class="section-title reveal delay-1">Get In Touch</h2>
+      <p class="section-subtitle reveal delay-2">Open to data analyst roles, full-stack opportunities, and public health data collaborations. Drop a message!</p>
+
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <div class="contact-info reveal-left">
+          <div class="contact-item">
+            <div class="contact-item-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Email (Personal)</div>
+              <div class="contact-item-value"><a href="mailto:adityapandey.adu@gmail.com" id="contact-gmail-link">adityapandey.adu@gmail.com</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Email (Professional)</div>
+              <div class="contact-item-value"><a href="mailto:aditya.pandey@piramalswasthya.org" id="contact-piramal-link">aditya.pandey@piramalswasthya.org</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 5.8 5.8l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Phone</div>
+              <div class="contact-item-value"><a href="tel:+918601862114" id="contact-phone-link">+91 8601862114</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Location</div>
+              <div class="contact-item-value">Muzaffarpur, Bihar, India</div>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://github.com/adityapandey2002/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub" id="contact-github-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/aditya-pandey-083a55233" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn" id="contact-linkedin-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form reveal-right" id="contact-form" action="https://formspree.io/f/your-form-id" method="POST" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="contact-name">Your Name</label>
+            <input class="form-input" type="text" id="contact-name" name="name" placeholder="John Doe" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-email">Email Address</label>
+            <input class="form-input" type="email" id="contact-email" name="email" placeholder="you@example.com" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-subject">Subject</label>
+            <input class="form-input" type="text" id="contact-subject" name="subject" placeholder="Data Analyst Role / Collaboration / etc." />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-message">Message</label>
+            <textarea class="form-textarea" id="contact-message" name="message" placeholder="Tell me about the opportunity, project, or question..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;cursor:pointer;" id="contact-submit-btn">
+            Send Message ✉️
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FOOTER
+  ====================================================== -->
+  <footer>
+    <div class="container">
+      <p class="footer-text">
+        Designed & built by <span>Aditya Pandey</span> · Data Analyst · Full-Stack Dev · AI Practitioner<br>
+        <span style="color:var(--text-muted);font-size:0.75rem;">
+          Field Data → Clean Insights → Real Decisions · Muzaffarpur, Bihar · 2025
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ======================================================
+       SCRIPTS
+  ====================================================== -->
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <!-- Particles & Main -->
+  <script src="js/particles.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

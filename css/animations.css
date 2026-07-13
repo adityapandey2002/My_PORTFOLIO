@@ -1,0 +1,354 @@
+/* ============================================================
+   ANIMATIONS CSS — Keyframes & Scroll Reveal Classes
+   ============================================================ */
+
+/* ---------- REVEAL ANIMATIONS ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-scale.revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger delays */
+.delay-1 {
+  transition-delay: 0.1s !important;
+}
+
+.delay-2 {
+  transition-delay: 0.2s !important;
+}
+
+.delay-3 {
+  transition-delay: 0.3s !important;
+}
+
+.delay-4 {
+  transition-delay: 0.4s !important;
+}
+
+.delay-5 {
+  transition-delay: 0.5s !important;
+}
+
+.delay-6 {
+  transition-delay: 0.6s !important;
+}
+
+.delay-7 {
+  transition-delay: 0.7s !important;
+}
+
+.delay-8 {
+  transition-delay: 0.8s !important;
+}
+
+/* ---------- GLOW PULSE ---------- */
+@keyframes glowPulse {
+
+  0%,
+  100% {
+    box-shadow: 0 0 12px rgba(0, 212, 255, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 28px rgba(0, 212, 255, 0.6), 0 0 48px rgba(0, 212, 255, 0.2);
+  }
+}
+
+@keyframes violetGlow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 12px rgba(124, 58, 237, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 28px rgba(124, 58, 237, 0.6), 0 0 48px rgba(124, 58, 237, 0.2);
+  }
+}
+
+/* ---------- FLOATING ---------- */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.float-delay {
+  animation: float 5s ease-in-out 2.5s infinite;
+}
+
+/* ---------- GRADIENT SHIFT ---------- */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ---------- SHIMMER ---------- */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg,
+      var(--text-secondary) 0%,
+      var(--accent-cyan) 30%,
+      var(--accent-violet) 50%,
+      var(--accent-cyan) 70%,
+      var(--text-secondary) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* ---------- CARD TILT (JS controlled via CSS vars) ---------- */
+.tilt-card {
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+  transition: transform 0.1s ease;
+}
+
+/* ---------- GRID NOISE OVERLAY ---------- */
+.noise-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.025;
+  background-image:
+    repeating-linear-gradient(0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 212, 255, 0.4) 2px,
+      rgba(0, 212, 255, 0.4) 3px),
+    repeating-linear-gradient(90deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 212, 255, 0.4) 2px,
+      rgba(0, 212, 255, 0.4) 3px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ---------- IMPACT NUMBER GLOW ---------- */
+.impact-number {
+  position: relative;
+}
+
+.impact-card:hover .impact-number {
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+}
+
+/* ---------- SCAN LINE EFFECT (hero) ---------- */
+@keyframes scanLine {
+  0% {
+    top: -10%;
+  }
+
+  100% {
+    top: 110%;
+  }
+}
+
+.scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(0, 212, 255, 0.4) 50%,
+      transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+  animation: scanLine 8s linear infinite;
+  opacity: 0.5;
+}
+
+/* ---------- ACTIVE NAV LINK ---------- */
+.nav-links a.active {
+  color: var(--accent-cyan);
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* ---------- TYPING CURSOR BLINK ---------- */
+@keyframes cursorBlink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ---------- PARTICLE PULSE ---------- */
+@keyframes particlePulse {
+
+  0%,
+  100% {
+    r: 3;
+    opacity: 0.8;
+  }
+
+  50% {
+    r: 5;
+    opacity: 1;
+  }
+}
+
+/* ---------- MOBILE NAV OVERLAY ---------- */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 11, 24, 0.95);
+  z-index: 998;
+  backdrop-filter: blur(12px);
+}
+
+.nav-overlay.open {
+  display: block;
+}
+
+/* ---------- LOADING SCREEN ---------- */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-primary);
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+#loader.done {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-name {
+  font-family: var(--font-name);
+  font-size: 1.4rem;
+  font-weight: 800;
+  background: var(--gradient-hero);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.loader-bar-wrap {
+  width: 200px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.loader-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-violet));
+  border-radius: 1px;
+  animation: loaderFill 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes loaderFill {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.loader-text {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  animation: loaderText 1.5s ease forwards;
+}
+
+@keyframes loaderText {
+  0% {
+    content: 'initializing...';
+  }
+}
