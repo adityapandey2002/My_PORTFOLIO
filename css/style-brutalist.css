@@ -1,0 +1,135 @@
+/* ============================================================
+   AESTHETIC 3: NEO-BRUTALIST (Raw Data Style)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Space+Grotesk:wght@600;700&display=swap');
+
+:root {
+  --bg-color: #0d0d0d;
+  --border-color: #ffffff;
+  --text-primary: #ffffff;
+  --text-accent: #ccff00; /* Neon yellow */
+  
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-display: 'Space Grotesk', sans-serif;
+  
+  --border-width: 2px;
+  --shadow-offset: 6px;
+  
+  --transition-fast: 0.1s linear;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: auto; font-size: 16px; background-color: var(--bg-color); }
+
+body {
+  font-family: var(--font-mono);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+
+/* Grids */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.section { padding: 100px 0; border-bottom: var(--border-width) solid var(--border-color); }
+
+/* Typography */
+.display-huge { font-family: var(--font-display); font-size: clamp(3.5rem, 8vw, 6.5rem); font-weight: 700; line-height: 1; letter-spacing: -0.05em; }
+.heading-lg { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 4rem); font-weight: 700; margin-bottom: 24px; border-bottom: var(--border-width) solid var(--border-color); padding-bottom: 12px; display: inline-block; }
+.heading-md { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; margin-bottom: 12px; }
+
+.text-highlight { color: var(--text-accent); }
+
+/* Brutalist Block elements */
+.brutal-block {
+  border: var(--border-width) solid var(--border-color);
+  background: var(--bg-color);
+  padding: 24px;
+  position: relative;
+}
+
+.brutal-shadow {
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--text-accent);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.brutal-shadow:hover {
+  transform: translate(2px, 2px);
+  box-shadow: calc(var(--shadow-offset) - 2px) calc(var(--shadow-offset) - 2px) 0 var(--text-accent);
+}
+
+/* Navbar */
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: var(--bg-color);
+  border-bottom: var(--border-width) solid var(--border-color);
+  padding: 16px 0;
+}
+.navbar .container { display: flex; justify-content: space-between; align-items: center; }
+.nav-logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; background: var(--text-accent); color: var(--bg-color); padding: 0 8px; }
+.nav-links { display: flex; gap: 24px; }
+.nav-links a { font-weight: 700; padding: 4px 8px; border: var(--border-width) solid transparent; }
+.nav-links a:hover { border-color: var(--text-accent); color: var(--text-accent); }
+
+/* Buttons */
+.btn-brutal {
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 1.1rem; font-weight: 700;
+  padding: 12px 24px; border: var(--border-width) solid var(--border-color);
+  background: var(--text-accent); color: var(--bg-color);
+  box-shadow: 4px 4px 0 var(--border-color);
+  cursor: pointer; transition: all var(--transition-fast);
+}
+.btn-brutal:hover {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0 var(--border-color);
+}
+.btn-outline {
+  background: var(--bg-color); color: var(--text-primary);
+  box-shadow: 4px 4px 0 var(--text-accent);
+}
+
+/* Ticker / Marquee */
+.ticker-wrap {
+  width: 100%; overflow: hidden; white-space: nowrap;
+  background: var(--text-accent); color: var(--bg-color);
+  border-top: var(--border-width) solid var(--border-color);
+  border-bottom: var(--border-width) solid var(--border-color);
+  padding: 12px 0; font-weight: 700; font-size: 1.2rem;
+}
+.ticker { display: inline-block; animation: ticker 20s linear infinite; padding-left: 100%; }
+.ticker-item { padding: 0 24px; }
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Hero Section */
+#hero { padding-top: 140px; padding-bottom: 60px; }
+.sys-info { margin-bottom: 24px; font-size: 0.85rem; border: var(--border-width) solid var(--border-color); padding: 8px 12px; display: inline-block; }
+.role-list { list-style: square inside; margin-top: 24px; margin-bottom: 40px; font-size: 1.1rem; }
+.role-list li { margin-bottom: 8px; }
+
+/* Grid Layout */
+.brutal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 32px; margin-top: 48px; }
+
+/* Tags */
+.tag-raw {
+  display: inline-block; border: 1px solid var(--border-color); padding: 4px 8px;
+  font-size: 0.75rem; margin-right: 8px; margin-bottom: 8px;
+}
+.tag-raw:hover { background: var(--border-color); color: var(--bg-color); }
+
+/* Table for Data representation */
+.data-table { width: 100%; border-collapse: collapse; margin-top: 24px; }
+.data-table th, .data-table td { border: var(--border-width) solid var(--border-color); padding: 12px; text-align: left; }
+.data-table th { background: var(--text-accent); color: var(--bg-color); font-family: var(--font-display); }
+
+/* Footer */
+footer { padding: 40px 0; text-align: center; font-size: 0.8rem; }
